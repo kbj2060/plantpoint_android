@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_neighbor"
+        android:icon="@drawable/ic_outline_pedal_bike_24"
+        android:title="@string/title_neighbor" />
+
+    <item
+        android:id="@+id/navigation_nation"
+        android:icon="@drawable/ic_outline_local_shipping_24"
+        android:title="@string/title_nation" />
+
+    <item
+        android:id="@+id/navigation_chat_room"
+        android:icon="@drawable/ic_outline_forum_24"
+        android:title="@string/title_chat" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_outline_person_24"
+        android:title="@string/title_me" />
+
+</menu>

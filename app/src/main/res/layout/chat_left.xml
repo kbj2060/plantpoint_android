@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/chat_left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/sendername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="10dp"
+            android:text="Kim"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded,SmallSp" />
+
+        <TextView
+            android:id="@+id/textmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_left_rounded_rect"
+            android:layout_gravity="start"
+            android:maxWidth="250dp"
+            android:textSize="10sp"
+            android:padding="10dp"
+            android:text="Hello"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="-1.5dp"
+            android:background="@drawable/chat_left_corner" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="5dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        tools:ignore="RtlHardcoded" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">PlantPoint</string>
+    <string name="title_neighbor">동네</string>
+    <string name="title_nation">전국</string>
+    <string name="title_news">소식</string>
+    <string name="title_chat">채팅</string>
+    <string name="title_chatRoom">채팅방</string>
+    <string name="title_me">계정</string>
+    <string name="detail">상세</string>
+    <string name="search">찾기</string>
+    <string name="require_login">로그인 필요</string>
+    <string name="notification">알림</string>
+    <string name="broccoli">브로콜리</string>
+    <string name="carrot">당근</string>
+    <string name="cabbage">양상추</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">이메일</string>
+    <string name="prompt_password">비밀번호</string>
+    <string name="action_sign_in">로그인</string>
+
+    <string name="signup">회원가입</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_pwd">비밀번호 찾기</string>
+
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
