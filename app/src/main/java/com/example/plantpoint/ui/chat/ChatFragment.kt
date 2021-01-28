@@ -49,7 +49,7 @@ class ChatFragment : Fragment() {
         val receiverUid = arguments?.getString("receiverUid").toString()
         val receiverName = arguments?.getString("receiverName").toString()
         val me = (activity as MainActivity).getMe()
-        Log.d("dd", me["name"].toString())
+
         textsend = root.findViewById(R.id.edit_message)
         root.findViewById<View>(R.id.button_send).setOnClickListener {
             val chat = Chat(

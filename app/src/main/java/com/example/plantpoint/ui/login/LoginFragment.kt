@@ -73,14 +73,6 @@ class LoginFragment : Fragment() {
         return root
     }
 
-    /*override fun onResume() {
-        super.onResume()
-        val user = FirebaseAuth.getInstance().currentUser
-        if(user != null){
-            (activity as LoginActivity).finish()
-        }
-    }*/
-
     @SuppressLint("ResourceAsColor")
     private fun showLoginFailedPopup(inflater : LayoutInflater) {
         val view = inflater.inflate(R.layout.login_popup, null)
@@ -95,7 +87,7 @@ class LoginFragment : Fragment() {
         alertDialog.show()
     }
 
-    public fun notEmptyStringCheck(info : String) : Boolean{
+    fun notEmptyStringCheck(info : String) : Boolean{
         return (info.isNotEmpty() && info != "null")
     }
 }

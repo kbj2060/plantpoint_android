@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.plantpoint.DTO.ChatRoom
+import com.example.plantpoint.dto.ChatRoom
 import com.example.plantpoint.MainActivity
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -24,7 +24,6 @@ class ChattingRoomFragment : Fragment() {
     var chatRoomAdapter: ChatRoomAdapter? = null
     var db = FirebaseFirestore.getInstance()
     var roomRef = db.collection("room")
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -59,6 +58,7 @@ class ChattingRoomFragment : Fragment() {
         recyclerView = root.findViewById(R.id.chat_room_recyclerview)
         linearLayoutManager = LinearLayoutManager(activity as MainActivity)
         recyclerView!!.layoutManager = linearLayoutManager
+
         val query = roomRef
             .whereArrayContains("talkers", user.uid)
             .orderBy("timestamp", Query.Direction.DESCENDING)
@@ -94,9 +94,5 @@ class ChattingRoomFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         chatRoomAdapter?.stopListening()
-    }
-
-    fun navigateToChat() {
-
     }
 }
