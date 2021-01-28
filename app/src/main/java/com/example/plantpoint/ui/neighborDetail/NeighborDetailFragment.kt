@@ -12,11 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.navArgs
-import com.example.plantpoint.DTO.ChatRoom
+import com.example.plantpoint.dto.ChatRoom
 import com.example.plantpoint.MainActivity
 import com.example.plantpoint.R
-import com.example.plantpoint.ui.neighbor.NeighborFragmentArgs
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference

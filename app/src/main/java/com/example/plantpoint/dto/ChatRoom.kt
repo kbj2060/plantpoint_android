@@ -1,4 +1,4 @@
-package com.example.plantpoint.DTO
+package com.example.plantpoint.dto
 
 import java.util.*
 

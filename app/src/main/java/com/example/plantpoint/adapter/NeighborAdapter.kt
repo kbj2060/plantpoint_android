@@ -2,7 +2,6 @@ package com.example.plantpoint.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.plantpoint.App
 import com.example.plantpoint.R
-import com.example.plantpoint.DTO.Neighbor
+import com.example.plantpoint.dto.Neighbor
 
 
 class NeighborAdapter(val neighborList: ArrayList<Neighbor>) : RecyclerView.Adapter<NeighborAdapter.CustomViewHolder>() {

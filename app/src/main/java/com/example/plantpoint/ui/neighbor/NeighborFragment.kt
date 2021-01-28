@@ -9,8 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.plantpoint.DTO.Neighbor
+import com.example.plantpoint.dto.Neighbor
 import com.example.plantpoint.MainActivity
 import com.example.plantpoint.R
 import com.example.plantpoint.adapter.NeighborAdapter
@@ -25,20 +24,10 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
 
     private lateinit var neighborViewModel: NeighborViewModel
     var rv_neighbor: DiscreteScrollView? = null
-
     private var db = FirebaseFirestore.getInstance()
     private var farmerRef = db.collection("farm")
-
     var neighborList: ArrayList<Neighbor> = ArrayList()
 
-    /*
-    class Neighbor ( val id: Int,
-                 val image: Int,
-                 val representativeArea: String,
-                 val farmerName: String,
-                 val farmerLocation:String ,
-                 val crops:Map<String, Int> )
-    */
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
