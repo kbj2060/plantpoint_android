@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_height">40dp</dimen>
+
+    <dimen name="neighbor_card_radius">10dp</dimen>
+    <dimen name="neighbor_card">300dp</dimen>
+    <dimen name="neighbor_card_title_height">40dp</dimen>
+    <dimen name="circle_logo">30dp</dimen>
+
+    <dimen name="neighbor_plants_height">25dp</dimen>
+    <dimen name="plants_content_height">25dp</dimen>
+    <dimen name="plants_text_size">12sp</dimen>
+    <dimen name="plant_icon">16dp</dimen>
+    <dimen name="neighbor_image_h">250dp</dimen>
+    <dimen name="DiscreteScrollView_width">250dp</dimen>
+
+    <dimen name="neighbor_title_size">12sp</dimen>
+    <dimen name="farmer_name_size">12sp</dimen>
+    <dimen name="neighbor_location_size">10sp</dimen>
+
+</resources>

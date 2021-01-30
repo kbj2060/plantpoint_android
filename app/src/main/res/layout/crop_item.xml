@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/neighbor_plants_height">
+
+    <ImageView
+        android:id="@+id/crop_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/plants_content_height"
+        android:foregroundGravity="left"
+        android:src="@drawable/ic_broccoli"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/crop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/plants_content_height"
+        android:gravity="center"
+        android:paddingStart="2dp"
+        android:paddingLeft="2dp"
+        android:text="브로콜리"
+        android:textColor="@color/black"
+        android:textSize="@dimen/plants_text_size"
+        android:minWidth="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/crop_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlSymmetry,SmallSp" />
+
+    <ImageView
+        android:id="@+id/won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:foregroundGravity="center"
+        android:background="@drawable/ic_currency_krw_icon_135723"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/crop_price"
+        app:layout_constraintStart_toEndOf="@+id/crop_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/crop_price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/plants_content_height"
+        android:gravity="center"
+        android:text="3000"
+        android:textColor="@color/black"
+        android:textSize="@dimen/plants_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/won"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlSymmetry,SmallSp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

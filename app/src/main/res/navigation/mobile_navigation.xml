@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_neighbor">
+
+    <fragment
+        android:id="@+id/navigation_neighbor"
+        android:name="com.example.plantpoint.ui.neighbor.NeighborFragment"
+        android:label="@string/title_neighbor">
+        <action
+            android:id="@+id/action_navigation_neighbor_to_neighbor_detail"
+            app:destination="@id/neighbor_detail" />
+
+        <argument
+            android:name="uid"
+            app:argType="integer" />
+        <argument
+            android:name="farmerLocation"
+            app:argType="string" />
+        <argument
+            android:name="farmerName"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_nation"
+        android:name="com.example.plantpoint.ui.nation.NationFragment"
+        android:label="@string/title_nation" />
+
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.plantpoint.ui.news.NewsFragment"
+        android:label="@string/title_news" />
+
+    <fragment
+        android:id="@+id/navigation_chat_room"
+        android:name="com.example.plantpoint.ui.chat.ChattingRoomFragment"
+        android:label="@string/title_chatRoom">
+
+        <action
+            android:id="@+id/action_navigation_chat_room_to_navigation_require_login"
+            app:destination="@id/navigation_require_login" />
+        <action
+            android:id="@+id/action_navigation_chat_room_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+
+        <argument
+            android:name="receiverUid"
+            app:argType="string" />
+
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+
+        <argument
+            android:name="directToChat"
+            app:argType="boolean" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.plantpoint.ui.chat.ChatFragment"
+        android:label="@string/title_chat">
+        <action
+            android:id="@+id/action_navigation_chat_to_navigation_require_login"
+            app:destination="@id/navigation_require_login" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_me"
+        android:name="com.example.plantpoint.ui.account.AccountFragment"
+        android:label="@string/title_me"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/neighbor_detail"
+        android:name="com.example.plantpoint.ui.neighborDetail.NeighborDetailFragment"
+        android:label="@string/detail">
+        <action
+            android:id="@+id/action_neighbor_detail_to_navigation_neighbor"
+            app:destination="@id/navigation_neighbor" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+
+        <argument
+            android:name="receiverUid"
+            app:argType="string" />
+
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+
+        <argument
+            android:name="directToChat"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_neighbor_detail_to_navigation_require_login"
+            app:destination="@id/navigation_require_login" />
+        <action
+            android:id="@+id/action_neighbor_detail_to_navigation_chat_room"
+            app:destination="@id/navigation_chat_room" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_require_login"
+        android:name="com.example.plantpoint.ui.login.RequireLoginFragment"
+        android:label="@string/require_login">
+        <action
+            android:id="@+id/action_navigation_require_login_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+        <action
+            android:id="@+id/action_navigation_require_login_to_neighbor_detail"
+            app:destination="@id/neighbor_detail" />
+        <action
+            android:id="@+id/action_navigation_require_login_to_navigation_chat_room"
+            app:destination="@id/navigation_chat_room" />
+    </fragment>
+
+</navigation>
