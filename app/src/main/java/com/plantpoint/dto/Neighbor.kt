@@ -1,7 +1,7 @@
 package com.example.plantpoint.dto
 
 class Neighbor ( val id: String = "",
-                 val profileURL: String = "",
+                 val profile: String = "",
                  val repArea: String = "",
                  val farmerName: String = "",
                  val farmerLocation:String = "",

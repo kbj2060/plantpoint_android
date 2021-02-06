@@ -23,10 +23,10 @@ import com.yarolegovich.discretescrollview.transform.ScaleTransformer
 class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<NeighborAdapter.CustomViewHolder>{
 
     private lateinit var neighborViewModel: NeighborViewModel
-    var rv_neighbor: DiscreteScrollView? = null
     private var db = FirebaseFirestore.getInstance()
     private var farmerRef = db.collection("farm")
     var neighborList: ArrayList<Neighbor> = ArrayList()
+    var rv_neighbor: DiscreteScrollView? = null
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -45,7 +45,7 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
                 for (document in documents) {
                     val newNeighbor = Neighbor(
                         id = document.id,
-                        profileURL = document.data["profileURL"] as String,
+                        profile = document.data["profile"] as String,
                         repArea = document.data["repArea"] as String,
                         farmerName = document.data["name"] as String,
                         farmerLocation = document.data["location"] as String,
@@ -73,18 +73,6 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
         return root
     }
 
-    fun initRecyclerView(items: ArrayList<Neighbor>) {
-        rv_neighbor!!.setOrientation(DSVOrientation.HORIZONTAL)
-        rv_neighbor!!.addOnItemChangedListener(this)
-        rv_neighbor!!.setItemTransitionTimeMillis(150)
-        rv_neighbor!!.setItemTransformer(
-                ScaleTransformer.Builder()
-                        .setMinScale(0.8f)
-                        .build()
-        )
-        rv_neighbor!!.adapter = NeighborAdapter( neighborList )
-    }
-
     override fun onStop() {
         super.onStop()
         neighborList = ArrayList()
@@ -99,8 +87,21 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
         val bundle = bundleOf(
             "uid" to neighbor.uid,
             "farmerName" to neighbor.farmerName,
-            "farmerLocation" to neighbor.farmerLocation
+            "farmerLocation" to neighbor.farmerLocation,
+            "farmerProfile" to neighbor.profile
         )
         navController.navigate(R.id.action_navigation_neighbor_to_neighbor_detail, bundle)
+    }
+
+    private fun initRecyclerView(items: ArrayList<Neighbor>) {
+        rv_neighbor!!.setOrientation(DSVOrientation.HORIZONTAL)
+        rv_neighbor!!.addOnItemChangedListener(this)
+        rv_neighbor!!.setItemTransitionTimeMillis(150)
+        rv_neighbor!!.setItemTransformer(
+            ScaleTransformer.Builder()
+                .setMinScale(0.8f)
+                .build()
+        )
+        rv_neighbor!!.adapter = NeighborAdapter( neighborList )
     }
 }

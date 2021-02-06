@@ -11,6 +11,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterInside
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.plantpoint.App
 import com.example.plantpoint.R
 import com.example.plantpoint.dto.Neighbor
@@ -45,15 +47,16 @@ class NeighborAdapter(val neighborList: ArrayList<Neighbor>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: NeighborAdapter.CustomViewHolder, position: Int) {
         Glide.with(holder.itemView.context)
-            .load(neighborList[position].profileURL)
-            .into(holder.profileURL)
+            .load(neighborList[position].profile)
+            .transform(CenterInside(), RoundedCorners(10))
+            .into(holder.profile)
         holder.farmerName.text = neighborList[position].farmerName
         holder.farmerLocation.text = neighborList[position].farmerLocation
         createCropsView(holder, position)
     }
 
     class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val profileURL:ImageView = itemView.findViewById(R.id.neighbor_title_img)
+        val profile:ImageView = itemView.findViewById(R.id.neighbor_title_img)
         val farmerName:TextView = itemView.findViewById(R.id.farmer_name)
         val farmerLocation:TextView = itemView.findViewById(R.id.neighbor_location)
         val cropsItemContainer: LinearLayout = itemView.findViewById(R.id.card_bottom)
