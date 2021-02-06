@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.login
+package com.plantpoint.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

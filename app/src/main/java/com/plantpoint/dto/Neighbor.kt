@@ -1,4 +1,4 @@
-package com.example.plantpoint.dto
+package com.plantpoint.dto
 
 class Neighbor ( val id: String = "",
                  val profile: String = "",

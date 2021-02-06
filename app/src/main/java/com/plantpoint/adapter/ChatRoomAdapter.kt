@@ -1,4 +1,4 @@
-package com.example.plantpoint.adapter
+package com.plantpoint.adapter
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.plantpoint.dto.ChatRoom
-import com.example.plantpoint.R
+import com.plantpoint.dto.ChatRoom
+import com.plantpoint.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import java.text.SimpleDateFormat
@@ -35,7 +35,7 @@ class ChatRoomAdapter(options: FirestoreRecyclerOptions<ChatRoom?>, me : Map<Str
         this.itemClickListener = itemClickListener as ItemClickListener
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatRoomAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.chat_room_item, parent, false)
         return ViewHolder(view).apply {

@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.neighbor
+package com.plantpoint.ui.neighbor
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

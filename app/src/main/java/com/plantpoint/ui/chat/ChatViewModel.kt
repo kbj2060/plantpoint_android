@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.chat
+package com.plantpoint.ui.chat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

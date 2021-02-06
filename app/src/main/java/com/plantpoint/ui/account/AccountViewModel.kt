@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.account
+package com.plantpoint.ui.account
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.plantpoint.dto
+package com.plantpoint.dto
 
 import java.util.*
 import kotlin.collections.ArrayList

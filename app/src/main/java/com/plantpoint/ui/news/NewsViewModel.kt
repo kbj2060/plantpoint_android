@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.news
+package com.plantpoint.ui.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

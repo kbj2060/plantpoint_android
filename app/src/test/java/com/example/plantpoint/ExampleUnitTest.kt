@@ -1,4 +1,4 @@
-package com.example.plantpoint
+package com.plantpoint
 
 import org.junit.Test
 

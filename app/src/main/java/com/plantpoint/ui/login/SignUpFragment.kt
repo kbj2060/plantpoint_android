@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.login
+package com.plantpoint.ui.login
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -7,9 +7,9 @@ import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.example.plantpoint.dto.User
-import com.example.plantpoint.LoginActivity
-import com.example.plantpoint.R
+import com.plantpoint.dto.User
+import com.plantpoint.LoginActivity
+import com.plantpoint.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -52,14 +52,15 @@ class SignUpFragment : Fragment() {
                 this.mAuth.createUserWithEmailAndPassword(email.text.toString().trim(), password.text.toString().trim())
                         .addOnCompleteListener((activity as LoginActivity), OnCompleteListener<AuthResult?> { task ->
                             if (task.isSuccessful) {
-                                val user: User = User(
-                                        type = type,
-                                        email = email.text.toString(),
-                                        address = address.text.toString(),
-                                        name = name.text.toString(),
-                                        registration = reg_front.text.toString() + reg_back.text.toString(),
-                                        uid = task.result!!.user!!.uid
-                                )
+                                val user: User =
+																	User(
+																		type = type,
+																		email = email.text.toString(),
+																		address = address.text.toString(),
+																		name = name.text.toString(),
+																		registration = reg_front.text.toString() + reg_back.text.toString(),
+																		uid = task.result!!.user!!.uid
+																	)
                                 saveUser(user)
                                 goBackToLogin()
                             } else {

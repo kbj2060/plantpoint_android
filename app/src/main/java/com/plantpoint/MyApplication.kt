@@ -1,4 +1,4 @@
-package com.example.plantpoint
+package com.plantpoint
 
 import android.app.Application
 import android.content.Context

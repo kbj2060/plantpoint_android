@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="80dp"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:bind="http://schemas.android.com/tools">
 
@@ -32,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -41,18 +42,17 @@
             android:id="@+id/partner_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
             android:gravity="center"
             android:textColor="@color/black"
-            android:text="김병진" />
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/last_msg"
             android:layout_width="wrap_content"
-            android:textColor="@color/gray_font"
-            android:textSize="10sp"
+            android:layout_height="wrap_content"
             android:text="1월 23일은 토요일입니다."
-            android:layout_height="wrap_content" />
+            android:textColor="@color/gray_font"
+            android:textSize="10sp" />
 
     </LinearLayout>
 

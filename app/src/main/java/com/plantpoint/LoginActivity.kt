@@ -1,5 +1,5 @@
 
-package com.example.plantpoint
+package com.plantpoint
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -16,8 +16,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.example.plantpoint.ui.login.LoginFragment
-import com.example.plantpoint.ui.login.LoginViewModel
+import com.plantpoint.ui.login.LoginFragment
+import com.plantpoint.ui.login.LoginViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -29,7 +29,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         supportFragmentManager
-                .beginTransaction().add(R.id.login_fragment, LoginFragment())
+                .beginTransaction().add(
+						R.id.login_fragment,
+						LoginFragment()
+					)
                 .commit()
     }
 

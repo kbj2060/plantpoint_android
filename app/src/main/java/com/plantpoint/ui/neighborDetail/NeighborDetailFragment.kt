@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.neighborDetail
+package com.plantpoint.ui.neighborDetail
 
 import android.os.Bundle
 import android.util.Log
@@ -13,9 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
-import com.example.plantpoint.dto.ChatRoom
-import com.example.plantpoint.MainActivity
-import com.example.plantpoint.R
+import com.plantpoint.dto.ChatRoom
+import com.plantpoint.MainActivity
+import com.plantpoint.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -131,7 +131,13 @@ class NeighborDetailFragment : Fragment() {
                   0 -> {
                     val roomDocument = roomRef.document()
                     val newRoomId = roomDocument.id
-                    val nChatRoom  = ChatRoom(newRoomId, "", validation, talkers, Date())
+                    val nChatRoom  = ChatRoom(
+											newRoomId,
+											"",
+											validation,
+											talkers,
+											Date()
+										)
                     addRoom(roomDocument, nChatRoom)
                     openChattingRoom(newRoomId)
                   }

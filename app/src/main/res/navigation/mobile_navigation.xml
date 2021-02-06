@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_neighbor"
-        android:name="com.example.plantpoint.ui.neighbor.NeighborFragment"
+        android:name="com.plantpoint.ui.neighbor.NeighborFragment"
         android:label="@string/title_neighbor">
         <action
             android:id="@+id/action_navigation_neighbor_to_neighbor_detail"
@@ -27,18 +27,18 @@
 
     <fragment
         android:id="@+id/navigation_nation"
-        android:name="com.example.plantpoint.ui.nation.NationFragment"
+        android:name="com.plantpoint.ui.nation.NationFragment"
         android:label="@string/title_nation" />
 
 
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.example.plantpoint.ui.news.NewsFragment"
+        android:name="com.plantpoint.ui.news.NewsFragment"
         android:label="@string/title_news" />
 
     <fragment
         android:id="@+id/navigation_chat_room"
-        android:name="com.example.plantpoint.ui.chat.ChattingRoomFragment"
+        android:name="com.plantpoint.ui.chat.ChattingRoomFragment"
         android:label="@string/title_chatRoom">
 
         <action
@@ -68,7 +68,7 @@
 
     <fragment
         android:id="@+id/navigation_chat"
-        android:name="com.example.plantpoint.ui.chat.ChatFragment"
+        android:name="com.plantpoint.ui.chat.ChatFragment"
         android:label="@string/title_chat">
         <action
             android:id="@+id/action_navigation_chat_to_navigation_require_login"
@@ -78,13 +78,17 @@
 
     <fragment
         android:id="@+id/navigation_me"
-        android:name="com.example.plantpoint.ui.account.AccountFragment"
+        android:name="com.plantpoint.ui.account.AccountFragment"
         android:label="@string/title_me"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navigation_me_to_navigation_require_login"
+            app:destination="@id/navigation_require_login" />
+    </fragment>
 
     <fragment
         android:id="@+id/neighbor_detail"
-        android:name="com.example.plantpoint.ui.neighborDetail.NeighborDetailFragment"
+        android:name="com.plantpoint.ui.neighborDetail.NeighborDetailFragment"
         android:label="@string/detail">
         <action
             android:id="@+id/action_neighbor_detail_to_navigation_neighbor"
@@ -115,7 +119,7 @@
 
     <fragment
         android:id="@+id/navigation_require_login"
-        android:name="com.example.plantpoint.ui.login.RequireLoginFragment"
+        android:name="com.plantpoint.ui.login.RequireLoginFragment"
         android:label="@string/require_login">
         <action
             android:id="@+id/action_navigation_require_login_to_navigation_chat"

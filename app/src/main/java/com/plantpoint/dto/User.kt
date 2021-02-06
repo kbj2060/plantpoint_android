@@ -1,4 +1,4 @@
-package com.example.plantpoint.dto
+package com.plantpoint.dto
 
 class User (
     val type:String = "",

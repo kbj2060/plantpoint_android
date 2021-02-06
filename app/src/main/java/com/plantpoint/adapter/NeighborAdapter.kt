@@ -1,4 +1,4 @@
-package com.example.plantpoint.adapter
+package com.plantpoint.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -13,9 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.plantpoint.App
-import com.example.plantpoint.R
-import com.example.plantpoint.dto.Neighbor
+import com.plantpoint.App
+import com.plantpoint.R
+
+import com.plantpoint.dto.Neighbor
 
 
 class NeighborAdapter(val neighborList: ArrayList<Neighbor>) : RecyclerView.Adapter<NeighborAdapter.CustomViewHolder>() {
@@ -31,7 +32,7 @@ class NeighborAdapter(val neighborList: ArrayList<Neighbor>) : RecyclerView.Adap
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): NeighborAdapter.CustomViewHolder {
+    ): CustomViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.neighbor_item, parent, false)
         return CustomViewHolder(view).apply {
@@ -45,7 +46,7 @@ class NeighborAdapter(val neighborList: ArrayList<Neighbor>) : RecyclerView.Adap
         return neighborList.size
     }
 
-    override fun onBindViewHolder(holder: NeighborAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         Glide.with(holder.itemView.context)
             .load(neighborList[position].profile)
             .transform(CenterInside(), RoundedCorners(10))

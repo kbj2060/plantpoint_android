@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.login
+package com.plantpoint.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,10 +11,11 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import com.example.plantpoint.LoginActivity
-import com.example.plantpoint.MainActivity
-import com.example.plantpoint.R
+import com.plantpoint.LoginActivity
+import com.plantpoint.MainActivity
+
 import com.google.firebase.auth.FirebaseAuth
+import com.plantpoint.R
 
 
 class RequireLoginFragment : Fragment() {

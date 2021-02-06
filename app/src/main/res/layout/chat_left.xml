@@ -24,6 +24,7 @@
             android:textSize="10sp"
             android:paddingLeft="10dp"
             android:text="Kim"
+            android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="RtlHardcoded,SmallSp" />
 

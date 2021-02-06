@@ -1,4 +1,4 @@
-package com.example.plantpoint.adapter
+package com.plantpoint.adapter
 
 import Chat
 import android.annotation.SuppressLint
@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.plantpoint.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.plantpoint.R
 import java.text.SimpleDateFormat
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -21,9 +21,9 @@ class ChatAdapter(options: FirestoreRecyclerOptions<Chat?>) :
     var customFormat = SimpleDateFormat("yyyy-MM-dd");
 
     override fun onBindViewHolder(
-        holder: ViewHolder,
-        position: Int,
-        model: Chat
+			holder: ViewHolder,
+			position: Int,
+			model: Chat
     ) {
         holder.message.text = model.message
         holder.username.text = model.senderName

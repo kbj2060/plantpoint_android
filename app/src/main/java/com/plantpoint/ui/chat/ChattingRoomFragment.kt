@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.chat
+package com.plantpoint.ui.chat
 
 import android.os.Bundle
 import android.util.Log
@@ -11,13 +11,13 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.plantpoint.dto.ChatRoom
-import com.example.plantpoint.MainActivity
+import com.plantpoint.dto.ChatRoom
+import com.plantpoint.MainActivity
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.example.plantpoint.R
-import com.example.plantpoint.adapter.ChatRoomAdapter
+import com.plantpoint.R
+import com.plantpoint.adapter.ChatRoomAdapter
 import com.google.firebase.firestore.Query
 
 class ChattingRoomFragment : Fragment() {

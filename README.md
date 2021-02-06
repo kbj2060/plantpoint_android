@@ -4,6 +4,16 @@ This application want to resolve the problem that farmer sell cheap and consumer
 
 <br/>
 
+## Prerequisite
+
+STEP 1. Make a Firebase Project.
+
+STEP 2. Get the **google-services.json**.
+
+STEP 3. Locate this file to app directory.
+
+<br/>
+
 ## Environments
 
 * OS : Mac
@@ -39,6 +49,8 @@ It shows the farmers close to your location. if you click the farmer image, you 
 </p>
 
 You can chat with farmers and make a deal or ask where we gonna meet. This data will be stored in Firestore.
+
+<br/>
 
 ## TODO LIST
 

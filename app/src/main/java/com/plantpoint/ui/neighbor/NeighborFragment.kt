@@ -1,4 +1,4 @@
-package com.example.plantpoint.ui.neighbor
+package com.plantpoint.ui.neighbor
 
 import android.os.Bundle
 import android.util.Log
@@ -9,10 +9,10 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.example.plantpoint.dto.Neighbor
-import com.example.plantpoint.MainActivity
-import com.example.plantpoint.R
-import com.example.plantpoint.adapter.NeighborAdapter
+import com.plantpoint.dto.Neighbor
+import com.plantpoint.MainActivity
+import com.plantpoint.R
+import com.plantpoint.adapter.NeighborAdapter
 import com.google.firebase.firestore.FirebaseFirestore
 import com.yarolegovich.discretescrollview.DSVOrientation
 import com.yarolegovich.discretescrollview.DiscreteScrollView
@@ -44,14 +44,14 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val newNeighbor = Neighbor(
-                        id = document.id,
-                        profile = document.data["profile"] as String,
-                        repArea = document.data["repArea"] as String,
-                        farmerName = document.data["name"] as String,
-                        farmerLocation = document.data["location"] as String,
-                        crops = document.data["crops"] as Map<String, Int>,
-                        uid = document.data["uid"] as String
-                    )
+											id = document.id,
+											profile = document.data["profile"] as String,
+											repArea = document.data["repArea"] as String,
+											farmerName = document.data["name"] as String,
+											farmerLocation = document.data["location"] as String,
+											crops = document.data["crops"] as Map<String, Int>,
+											uid = document.data["uid"] as String
+										)
                     neighborList.add(newNeighbor)
                 }
 
@@ -78,7 +78,7 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
         neighborList = ArrayList()
     }
 
-    override fun onCurrentItemChanged( viewHolder: NeighborAdapter.CustomViewHolder?, adapterPosition: Int ) {
+    override fun onCurrentItemChanged(viewHolder: NeighborAdapter.CustomViewHolder?, adapterPosition: Int ) {
         (activity as MainActivity).changeNeighborScrollIndex(adapterPosition)
     }
 
@@ -102,6 +102,7 @@ class NeighborFragment : Fragment(),  DiscreteScrollView.OnItemChangedListener<N
                 .setMinScale(0.8f)
                 .build()
         )
-        rv_neighbor!!.adapter = NeighborAdapter( neighborList )
+        rv_neighbor!!.adapter =
+					NeighborAdapter(neighborList)
     }
 }
